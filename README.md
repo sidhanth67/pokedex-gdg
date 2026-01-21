@@ -14,3 +14,7 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Project Overview
+
+Attempted PS1 of the GDG induction problem statements. It was a frontend only task to build a website which returned a pokemon with information about it on entering its name. The website contains a feature to search for any pokemon by name and displays the pokemon's information in a card-like format. The information displayed includes the Pokemon's name along with its type and a sprite(picture) of the pokemon which on being clicked opens the pokemon's web page in pokemondb website. The website also contains a feature to play the cry of each pokemon. On opening the site, a catalogue of 20 pokemon is displayed and other pokemon can further be searched by typing their name in the bar and then clicking the search button.  
