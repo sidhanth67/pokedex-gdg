@@ -63,13 +63,12 @@ function Mainpart() {
         {pokemonList.map((pokemon) => (
           <div key={pokemon.id} className="pokemon-card">
             <h2>{pokemon.name.toUpperCase()}</h2>
-            <img 
-              src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default} 
-              alt={pokemon.name} 
-              style={{ width: '100%', height: 'auto' }}
-            />
-            
-            <div className="types-container">
+            <a href={`https://pokemondb.net/pokedex/${pokemon.name.toLowerCase()}`} target="_blank" rel="noreferrer">
+          <img
+           src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default}
+          alt={pokemon.name}
+          /></a>
+           <div className="types-container">
               {pokemon.types.map((t) => (
                 <span key={t.type.name} className={`type-badge ${t.type.name}`}>
                   {t.type.name}
