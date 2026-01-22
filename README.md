@@ -22,10 +22,14 @@ Attempted PS1 of the GDG induction problem statements.
 It was a frontend only task to build a website which returned a pokemon with information about it on entering its name. The website contains a feature to search for any pokemon by name and displays the pokemon's information in a card-like format. The information displayed includes the Pokemon's name along with its type and a sprite(picture) of the pokemon which on being clicked opens the pokemon's web page in pokemondb website.
 
 The website also contains a feature to play the cry of each pokemon. On opening the site, a catalogue of 20 pokemon is displayed and other pokemon can further be searched by typing their name in the bar and then clicking the search button.
+
 <img width="1877" height="891" alt="Screenshot 2026-01-22 222458" src="https://github.com/user-attachments/assets/b695e16f-5c33-4217-8b63-e98801c163e7" />
 
 The pokemon name must be correctly entered into the search bar in order to find the pokemon.
+
 <img width="1881" height="898" alt="Screenshot 2026-01-22 224615" src="https://github.com/user-attachments/assets/90f3c658-b613-47d0-b25a-bc33d7d51ca6" />
+
+A back button is used to reload the site and display the initial 20 pokemon.
 
 ## Code
 
