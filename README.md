@@ -41,6 +41,6 @@ The code can be run by cloning the repo then entering the project directory foll
 
 ## Hosting
 
-The website has been hosted using netlify at the link: https://pokedex-gdg.netlify.app/
+The website has been hosted using vercel at the link: https://pokedex-hjqv57vol-sidhanths-projects-3d0b2594.vercel.app/
 
 
