@@ -33,9 +33,9 @@ A back button is used to reload the site and display the initial 20 pokemon.
 
 ## Code
 
-The files of code are contained in the src folder.
+The files of code are contained in the `src` folder.
 
-index.css contains the css part of the code used to style the website. upper.jsx contains the code for the top part of the website and mainpart.jsx contains the code for the diplay and search of the pokemon. main.jsx and app.jsx are used for linking different parts of the code.
+`index.css` contains the css part of the code used to style the website. `upper.jsx` contains the code for the top part of the website and `mainpart.jsx` contains the code for the diplay and search of the pokemon. `main.jsx` and `app.jsx` are used for linking different parts of the code.
 
 The code can be run by cloning the repo then entering the project directory followed by using the command `npm start` to open the website.
 
