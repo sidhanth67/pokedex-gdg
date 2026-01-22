@@ -33,7 +33,12 @@ function Mainpart() {
       .catch((err) => alert("Pokemon not found!"));
   };
 
-  // 3. Sound Player Function
+  // 3. Back / Refresh Function
+  const handleBack = () => {
+    window.location.reload(); // This tells the browser to refresh the page
+  };
+
+  // 4. Sound Player Function
   const playSound = (soundUrl) => {
     if (!soundUrl) return;
     const audio = new Audio(soundUrl);
@@ -50,9 +55,19 @@ function Mainpart() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <button className="Button" onClick={handleSearch}>Search</button>
+
+        {/* Back Button: Shows up if pokemonList doesn't have exactly 20 items */}
+        {pokemonList.length !== 20 && (
+          <button 
+            className="Button" 
+            onClick={handleBack} 
+            style={{ marginLeft: '10px', backgroundColor: '#666' }}
+          >
+            Back
+          </button>
+        )}
       </div>
 
-      {/* The Container with Flexbox centering */}
       <div className="pokemon-grid" style={{ 
         display: 'flex', 
         flexWrap: 'wrap', 
@@ -64,11 +79,13 @@ function Mainpart() {
           <div key={pokemon.id} className="pokemon-card">
             <h2>{pokemon.name.toUpperCase()}</h2>
             <a href={`https://pokemondb.net/pokedex/${pokemon.name.toLowerCase()}`} target="_blank" rel="noreferrer">
-          <img
-           src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default}
-          alt={pokemon.name}
-          /></a>
-           <div className="types-container">
+              <img 
+                src={pokemon.sprites.other['official-artwork'].front_default || pokemon.sprites.front_default} 
+                alt={pokemon.name} 
+              />
+            </a>
+            
+            <div className="types-container">
               {pokemon.types.map((t) => (
                 <span key={t.type.name} className={`type-badge ${t.type.name}`}>
                   {t.type.name}
@@ -76,7 +93,6 @@ function Mainpart() {
               ))}
             </div>
 
-            {/* Sound Button */}
             <button 
               className="sound-button"
               onClick={() => playSound(pokemon.cries?.latest)}
