@@ -4,7 +4,7 @@ function Mainpart() {
   const [searchTerm, setSearchTerm] = useState("");
   const [pokemonList, setPokemonList] = useState([]);
 
-  // 1. Fetch the initial list of 20
+ // sets the state of the website when it loads
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=20')
       .then((res) => res.json())
@@ -18,7 +18,7 @@ function Mainpart() {
       .catch((err) => console.log("Error fetching initial list", err));
   }, []);
 
-  // 2. Search Function
+  //registers the name inputted in the bar
   const handleSearch = () => {
     if (!searchTerm) return;
     
@@ -33,12 +33,12 @@ function Mainpart() {
       .catch((err) => alert("Pokemon not found!"));
   };
 
-  // 3. Back / Refresh Function
+  
   const handleBack = () => {
-    window.location.reload(); // This tells the browser to refresh the page
+    window.location.reload(); //Refresh function
   };
 
-  // 4. Sound Player Function
+  //playing the pokemon cry
   const playSound = (soundUrl) => {
     if (!soundUrl) return;
     const audio = new Audio(soundUrl);
@@ -56,7 +56,7 @@ function Mainpart() {
         />
         <button className="Button" onClick={handleSearch}>Search</button>
 
-        {/* Back Button: Shows up if pokemonList doesn't have exactly 20 items */}
+        
         {pokemonList.length !== 20 && (
           <button 
             className="Button" 
