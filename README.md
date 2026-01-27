@@ -41,5 +41,4 @@ The code can be run by cloning the repo then entering the project directory foll
 
 ## Hosting
 
-The website has been hosted using vercel at the link: pokedex-gdg.vercel.app
-
+The website has been hosted using vercel at the link: [Pokedex](https://pokedex-gdg.vercel.app)
